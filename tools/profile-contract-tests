@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+export GOCACHE="${GOCACHE:-/tmp/opt-wiki-go-cache}"
+go run ./cmd/profile-tests --package ./internal/contract --threshold-seconds "${PROFILE_THRESHOLD_SECONDS:-5}" --top "${PROFILE_TOP:-12}"

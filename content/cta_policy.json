@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "channel": "whatsapp",
+  "phone_placeholder": "CONFIGURAR_WHATSAPP_PROPRIO",
+  "intent": "contratar_advogado",
+  "requires_context_message": true,
+  "context_message_template": "Origem: {path}. Intenção: {unique_intent_id}. Página: {title}. Vim do Portal Jurídico e quero triagem jurídica online sobre este conteúdo.",
+  "context_origin_parameters": ["path", "unique_intent_id", "title"],
+  "requires_approved_legal_content": true,
+  "requires_source_provenance": true,
+  "requires_editorial_review": true,
+  "allowed_page_types": ["wiki", "pergunta", "tema", "artigo"],
+  "blocked_statuses": ["draft", "needs_review", "noindex", "archived"]
+}

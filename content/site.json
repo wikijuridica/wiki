@@ -1,0 +1,12 @@
+{
+  "base_url": "https://wikijuridica.com.br",
+  "base_url_mode": "official_configured",
+  "official_url_status": "locked",
+  "official_url_locked": true,
+  "editorial_identity": {
+    "author_name": "Rafael Toledo",
+    "oab_section": "RJ",
+    "oab_number": "227191",
+    "source": "project_owner_declared_config"
+  }
+}

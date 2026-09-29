@@ -1,0 +1,34 @@
+{
+  "target_minimum_pages": 10000,
+  "requires_architecture_before_content": true,
+  "requires_source_provenance": true,
+  "requires_editorial_review": true,
+  "published_pages_during_p0": 0,
+  "blueprints": [
+    {
+      "page_type": "wiki",
+      "families": ["direito-civil", "direito-familia", "direito-trabalhista", "direito-previdenciario", "direito-consumidor"],
+      "topics_per_family": 600
+    },
+    {
+      "page_type": "pergunta",
+      "families": ["direito-civil", "direito-familia", "direito-trabalhista", "direito-previdenciario", "direito-consumidor"],
+      "topics_per_family": 700
+    },
+    {
+      "page_type": "tema",
+      "families": ["contratar-advogado", "duvidas-urgentes", "documentos-e-prazos", "custos-e-riscos"],
+      "topics_per_family": 500
+    },
+    {
+      "page_type": "glossario",
+      "families": ["conceitos-juridicos"],
+      "topics_per_family": 700
+    },
+    {
+      "page_type": "fonte-oficial",
+      "families": ["legislacao", "tribunais", "dados-abertos"],
+      "topics_per_family": 400
+    }
+  ]
+}

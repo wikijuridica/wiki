@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+export GOCACHE="${GOCACHE:-/tmp/opt-wiki-go-cache}"
+tmp_dir="$(mktemp -d "${TMPDIR:-/tmp}/opt-wiki-content-lab-XXXXXX")"
+trap 'rm -rf "$tmp_dir"' EXIT
+
+cat > "$tmp_dir/natural.txt" <<'EOF'
+A pensão alimentícia pode ser revista quando surge uma mudança concreta na renda de quem paga ou nas necessidades de quem recebe. Uma página informativa precisa explicar esse ponto com cuidado, porque documentos de renda, despesas essenciais, idade dos filhos, acordos anteriores e decisões judiciais podem alterar a estratégia. O leitor deve entender que o texto não substitui consulta jurídica individual, mas ajuda a organizar dúvidas antes de falar com um advogado. Um conteúdo útil também mostra riscos práticos, como combinar pagamentos por mensagem sem formalizar o acordo, deixar comprovantes incompletos ou ignorar prazos processuais. A orientação pública deve ser clara, natural e responsável, sem prometer resultado e sem transformar a página em lista de palavras-chave.
+EOF
+
+cat > "$tmp_dir/mecanico.txt" <<'EOF'
+Advogado trabalhista em São Paulo. Advogado trabalhista em Campinas. Advogado trabalhista em Santos. Advogado trabalhista em Sorocaba. Advogado trabalhista em Osasco. Advogado trabalhista em Guarulhos. Contrate advogado trabalhista pelo WhatsApp. Advogado trabalhista rápido. Advogado trabalhista urgente. Advogado trabalhista para rescisão. Advogado trabalhista para horas extras. Advogado trabalhista para justa causa. Advogado trabalhista em São Paulo para rescisão. Advogado trabalhista em Campinas para rescisão. Advogado trabalhista em Santos para rescisão.
+EOF
+
+go run ./cmd/content-lab "natural:$tmp_dir/natural.txt" "mechanical:$tmp_dir/mecanico.txt"

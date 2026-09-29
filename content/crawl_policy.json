@@ -1,0 +1,25 @@
+{
+  "sitemap_path": "/sitemap.xml",
+  "rules": [
+    {
+      "user_agent": "Googlebot",
+      "allow": ["/"],
+      "disallow": ["/buscar/", "/*?*"]
+    },
+    {
+      "user_agent": "OAI-SearchBot",
+      "allow": ["/"],
+      "disallow": ["/buscar/", "/*?*"]
+    },
+    {
+      "user_agent": "GPTBot",
+      "allow": ["/"],
+      "disallow": ["/buscar/", "/*?*"]
+    },
+    {
+      "user_agent": "*",
+      "allow": ["/"],
+      "disallow": ["/buscar/", "/*?*"]
+    }
+  ]
+}
